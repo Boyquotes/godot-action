@@ -18,6 +18,7 @@ func _physics_process(delta):
 	# Normalize distance when moving diagonally on the cartesian plan
 	input_vector.normalized()
 
+	# If moving with arrow keys
 	if input_vector != Vector2.ZERO:
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
